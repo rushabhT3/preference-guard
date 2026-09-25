@@ -1,0 +1,117 @@
+.wrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: var(--fs-control);
+  font-feature-settings: var(--num-features);
+}
+
+.table th {
+  padding: 0 var(--space-12) var(--space-8) 0;
+  border-bottom: var(--border-rule);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-label);
+  text-align: right;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.table td {
+  height: 48px;
+  padding: var(--space-8) var(--space-12) var(--space-8) 0;
+  border-bottom: var(--border-row);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.table th:first-child,
+.table td:first-child {
+  text-align: left;
+}
+
+.table tbody th,
+.table tfoot th {
+  padding: var(--space-8) var(--space-12) var(--space-8) 0;
+  border-bottom: var(--border-row);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--fs-control);
+  font-weight: var(--fw-medium);
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.table th.barCell {
+  text-align: left;
+}
+
+.table tbody tr:hover {
+  background: var(--sunken);
+}
+
+.table tfoot td {
+  border-top: var(--border-rule);
+  border-bottom: 0;
+  font-weight: var(--fw-semibold);
+}
+
+.barCell {
+  width: 40%;
+  min-width: 96px;
+}
+
+.barWithValue {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 4ch;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.emphasis {
+  color: var(--blocked-ink);
+  font-weight: var(--fw-semibold);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.track {
+  display: block;
+  height: 10px;
+  background: var(--track);
+}
+
+.fill,
+.fillMuted {
+  display: block;
+  height: 100%;
+  border-radius: 0 4px 4px 0;
+  background: var(--accent);
+  transform: scaleX(var(--pct));
+  transform-origin: left;
+  animation: grow var(--dur-slow) var(--ease-out);
+}
+
+.fillMuted {
+  background: var(--border-strong);
+}
+
+.note {
+  margin-top: var(--space-12);
+  color: var(--muted);
+  font-size: var(--fs-small);
+}
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+}

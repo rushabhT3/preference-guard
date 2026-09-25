@@ -1,0 +1,71 @@
+.card,
+.baseline {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: var(--space-20);
+  border: var(--border-default);
+  border-radius: var(--radius-panel);
+  background: var(--surface);
+}
+
+.baseline {
+  border-color: transparent;
+  background: var(--sunken);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+}
+
+.baseline .eyebrow {
+  color: var(--muted);
+}
+
+.title {
+  margin-top: var(--space-4);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+}
+
+.figures {
+  display: grid;
+  margin-top: var(--space-16);
+}
+
+.figure {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-12);
+  padding-block: var(--space-8);
+  border-bottom: var(--border-row);
+}
+
+.figure dt {
+  color: var(--muted);
+  font-size: var(--fs-small);
+}
+
+.figure dd {
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-semibold);
+}
+
+.formulas {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: auto;
+  padding-top: var(--space-16);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  line-height: var(--lh-body);
+  list-style: none;
+}
