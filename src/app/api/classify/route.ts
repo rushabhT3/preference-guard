@@ -4,7 +4,7 @@ import { handleClassify } from "@/server/classify";
 import { assessPastRejections } from "@/server/history-assessment";
 import { createRateLimiter } from "@/server/rate-limit";
 
-const RATE_LIMIT = { limit: 10, windowMs: 60_000 };
+const RATE_LIMIT = { limit: 30, windowMs: 60_000 };
 const isAllowed = createRateLimiter(RATE_LIMIT);
 const classifiers = getClassifiers({
   GEMINI_API_KEY: process.env.GEMINI_API_KEY,
@@ -31,7 +31,9 @@ async function readJsonBody(request: Request): Promise<unknown> {
 export async function POST(request: Request): Promise<Response> {
   if (!isAllowed(clientIp(request), Date.now())) {
     return Response.json(
-      { error: "Too many requests. Try again in a minute." },
+      {
+        error: `That is the demo limit of ${RATE_LIMIT.limit} classifications a minute. Try again shortly.`,
+      },
       {
         status: 429,
         headers: { "Retry-After": String(RATE_LIMIT.windowMs / 1000) },

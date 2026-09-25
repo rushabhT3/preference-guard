@@ -7,12 +7,7 @@ export type ClassificationState =
   | { phase: "error"; message: string }
   | { phase: "done"; result: ClassifyResponse; request: ClassifyRequest };
 
-const RATE_LIMITED_STATUS = 429;
-
 function errorMessage(status: number, body: unknown): string {
-  if (status === RATE_LIMITED_STATUS) {
-    return "Ten classifications a minute is the demo limit. Try again shortly.";
-  }
   const serverMessage = (body as { error?: unknown } | null)?.error;
   return typeof serverMessage === "string"
     ? serverMessage

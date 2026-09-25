@@ -102,7 +102,7 @@ flowchart LR
 - "Engine violation rate" means sends the engine marks Blocked, divided by all sends. It is measured by the engine, not from rejection text, so it is comparable before and after launch.
 - Scenario B assumes replacement profiles exist in each client's pool, and that clients react to them the way they reacted to this month's compliant sends.
 - Search time is taken from the brief: 2 hours per client per week, spread evenly over sends.
-- The rate limit is 10 requests per minute per IP, held in memory. It applies per serverless instance and is for demo purposes only.
+- The rate limit is 30 requests per minute per IP, held in memory. It applies per serverless instance and is for demo purposes only.
 
 ## What the replay says
 
