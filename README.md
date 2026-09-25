@@ -36,7 +36,7 @@ Mobile layouts are in `docs/*-mobile.png`.
 
 ## Live demo
 
-Not deployed yet. See [Deploy](#deploy). The link will be added here once it is live.
+https://preference-guard.vercel.app. It runs on mock data, and the feedback page calls Gemini live.
 
 ## Run locally
 
