@@ -7,8 +7,8 @@ import { createRateLimiter } from "@/server/rate-limit";
 const RATE_LIMIT = { limit: 10, windowMs: 60_000 };
 const isAllowed = createRateLimiter(RATE_LIMIT);
 const classifiers = getClassifiers({
-  ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,
-  ANTHROPIC_MODEL: process.env.ANTHROPIC_MODEL,
+  GEMINI_API_KEY: process.env.GEMINI_API_KEY,
+  GEMINI_MODEL: process.env.GEMINI_MODEL,
 });
 
 function clientIp(request: Request): string {

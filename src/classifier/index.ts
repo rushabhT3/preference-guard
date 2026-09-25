@@ -1,13 +1,13 @@
 import "server-only";
-import { createAnthropicClassifier } from "./anthropic";
+import { createGeminiClassifier } from "./gemini";
 import { keywordClassifier } from "./keyword";
 import type { RejectionClassifier } from "./types";
 
-export const DEFAULT_ANTHROPIC_MODEL = "claude-haiku-4-5";
+export const DEFAULT_GEMINI_MODEL = "gemini-3.5-flash-lite";
 
 export interface ClassifierEnv {
-  ANTHROPIC_API_KEY?: string;
-  ANTHROPIC_MODEL?: string;
+  GEMINI_API_KEY?: string;
+  GEMINI_MODEL?: string;
 }
 
 export interface Classifiers {
@@ -16,13 +16,13 @@ export interface Classifiers {
 }
 
 export function getClassifiers(env: ClassifierEnv): Classifiers {
-  const apiKey = env.ANTHROPIC_API_KEY?.trim();
+  const apiKey = env.GEMINI_API_KEY?.trim();
   if (!apiKey) {
     return { primary: keywordClassifier, fallback: keywordClassifier };
   }
-  const model = env.ANTHROPIC_MODEL?.trim() || DEFAULT_ANTHROPIC_MODEL;
+  const model = env.GEMINI_MODEL?.trim() || DEFAULT_GEMINI_MODEL;
   return {
-    primary: createAnthropicClassifier({ apiKey, model }),
+    primary: createGeminiClassifier({ apiKey, model }),
     fallback: keywordClassifier,
   };
 }

@@ -17,7 +17,7 @@
     "screenshots": "tsx scripts/screenshots.ts"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "0.128.0",
+    "@google/genai": "2.24.0",
     "next": "16.3.6",
     "react": "19.3.0",
     "react-dom": "19.3.0",

@@ -14,7 +14,7 @@ export default function FeedbackPage() {
         section="Feedback"
         meta="The model reads · the rules decide"
         title="Turn a rejection into a reason"
-        lede="Claude reads free-text feedback and lists the reasons it states. It never sees the client's preferences. Code then checks each reason against those preferences to decide whether Preference Guard could have prevented the send."
+        lede="Gemini reads free-text feedback and lists the reasons it states. It never sees the client's preferences. Code then checks each reason against those preferences to decide whether Preference Guard could have prevented the send."
       />
       <FeedbackWorkbench
         samples={samples}

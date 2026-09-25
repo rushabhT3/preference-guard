@@ -20,7 +20,7 @@ In the last 30 days, 1,000 profiles were shared and only 310 were accepted. That
     - **Blocked:** each broken rule is named. Sending anyway needs a logged override reason.
   - Unverified sends and overrides are counted separately, and neither is counted as a violation.
 - **Feedback**
-  - Claude turns free-text rejections (English or Hinglish, often messy) into structured reasons. Code then decides whether each reason was *preventable*, a *data gap*, *preference drift*, a *new signal*, a *soft mismatch* or *subjective*.
+  - Gemini turns free-text rejections (English or Hinglish, often messy) into structured reasons. Code then decides whether each reason was *preventable*, a *data gap*, *preference drift*, a *new signal*, a *soft mismatch* or *subjective*.
   - When the same unstated reason comes up twice for a client, it becomes a draft rule for the matchmaker to approve.
   - Twelve one-click samples cover every verdict.
 - **Impact**
@@ -44,7 +44,7 @@ Requires Node.js 24 (see `.nvmrc`).
 
 ```bash
 npm install
-cp .env.example .env.local   # optional: add ANTHROPIC_API_KEY to use Claude
+cp .env.example .env.local   # optional: add GEMINI_API_KEY to use Gemini
 npm run dev                  # http://localhost:3000
 ```
 
@@ -68,8 +68,8 @@ flowchart LR
     F["/feedback"] -->|POST| API["/api/classify"]
   end
   API --> H["server/classify.ts"]
-  H --> C{"ANTHROPIC_API_KEY?"}
-  C -->|"yes"| Claude["Claude Haiku 4.5<br/>structured output"]
+  H --> C{"GEMINI_API_KEY?"}
+  C -->|"yes"| Gemini["Gemini 3.5 Flash-Lite<br/>structured output"]
   C -->|"no, or API error"| K["keyword classifier"]
   WV --> D["domain/ (pure TS)<br/>rules · ranking · preventability · funnel"]
   IV --> D
@@ -80,18 +80,18 @@ flowchart LR
 ```
 
 - `src/domain` holds the whole business logic, as pure functions with no I/O, no clock and no randomness. The Zod schemas in `domain/schemas.ts` are the single source of truth for every type.
-- `src/classifier` contains the Claude and keyword implementations of one `RejectionClassifier` interface. The Claude module is guarded with `server-only`.
+- `src/classifier` contains the Gemini and keyword implementations of one `RejectionClassifier` interface. The Gemini client module is guarded with `server-only`; parsing and the prompt are pure and unit-tested.
 - `src/server/classify.ts` is the request handler. Its dependencies are injected, so it is unit-tested without Next.js or the network. `route.ts` is a thin wrapper over it.
 - Pages build plain view models on the server. Client components only handle interaction.
 
 ## Decisions and why
 
 - **The rules are deterministic, not an LLM.** Dealbreakers are yes/no, have to be explainable ("Smoking: occasionally. Client rule: Non-smoker only"), and must run on hundreds of candidates for free.
-- **The LLM only reads free text.** Claude turns feedback into reasons, and code decides whether a reason was preventable. That keeps the metric auditable and the model swappable.
-- **The client's preferences are hidden from the LLM.** If Claude saw "client: no smokers", it would find smoking in vague feedback, and the *preventable* count would inflate itself.
+- **The LLM only reads free text.** Gemini turns feedback into reasons, and code decides whether a reason was preventable. That keeps the metric auditable and the model swappable.
+- **The client's preferences are hidden from the LLM.** If the model saw "client: no smokers", it would find smoking in vague feedback, and the *preventable* count would inflate itself.
 - **Needs check is kept separate from a violation.** A blank field is a data-quality problem, while a broken rule is a judgment problem. Merging them would inflate the violation rate and hide which problem you have.
 - **Ranking uses the lower bound.** Unknown soft-preference fields score 0 for ranking, and the upper bound is shown next to it ("fit 43 (2 unknown, up to 71)"). A sparse profile can never outrank a complete one with equal known fit.
-- **Why Haiku 4.5.** Classifying one rejection is a small structured task where cost and latency matter more than depth. Output goes through the structured-output format and is then validated against the same Zod schema. The SDK's schema transform turns enums into descriptions, so the code validates after the call rather than assuming the enum values were enforced.
+- **Why Gemini 3.5 Flash-Lite.** Classifying one rejection is a small structured task where cost and latency matter more than depth. It is Google's fastest, cheapest stable 3.5 model and thinks minimally by default. The Zod schema is sent as `responseJsonSchema`, so enums are enforced by constrained decoding, and the answer is validated against the same schema before use.
 - **No database.** The brief is a 30-day snapshot and the prototype has no users to persist. Session actions (sends, overrides, approvals) live in React state and reset on reload.
 - **Why tsx stays.** TypeScript 7's native `tsc` only type-checks. `tsx` runs the data generator and the screenshot script.
 - **Past rejections use the keyword classifier.** Draft-rule suggestions look at a client's whole rejection history. Re-reading it through the LLM on every request would cost one API call per past rejection. In production, each rejection would be classified once, when it arrives.
@@ -138,7 +138,7 @@ flowchart LR
 
 ## Model note
 
-The default model is `claude-haiku-4-5`, the alias for `claude-haiku-4-5-20251001`. Its retirement is scheduled for no sooner than 2026-10-15. If it has been retired, set `ANTHROPIC_MODEL=claude-sonnet-5`. The keyword fallback keeps the demo working either way. Any API error, timeout or schema mismatch falls back to the keyword classifier, and the page says so.
+The default model is `gemini-3.5-flash-lite`, a stable model. To use another, set `GEMINI_MODEL` (for example `gemini-3.8-flash`). The keyword fallback keeps the demo working either way. Any API error, timeout or schema mismatch falls back to the keyword classifier, and the page says so.
 
 ## Deploy
 
@@ -147,7 +147,7 @@ npx vercel@latest          # link the project
 npx vercel@latest --prod
 ```
 
-Node 24 is selected through `engines` in `package.json`. To use Claude, add `ANTHROPIC_API_KEY` as an encrypted production environment variable. Set a monthly spend limit in the Anthropic Console before sharing the link.
+Node 24 is selected through `engines` in `package.json`. To use Gemini, add `GEMINI_API_KEY` as an encrypted production environment variable. Check the key's quota and billing in Google AI Studio before sharing the link.
 
 ## Next steps
 

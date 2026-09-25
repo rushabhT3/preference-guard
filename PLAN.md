@@ -1,5 +1,9 @@
 # PLAN.md: Preference Guard (The Date Crew assessment prototype)
 
+> Update 2026-09-25: the rejection classifier now uses Google Gemini (`@google/genai`,
+> model `gemini-3.5-flash-lite`, env `GEMINI_API_KEY` / `GEMINI_MODEL`) instead of
+> Claude. Sections 3, 8.2, 14 and 15 describe the original Anthropic plan; README is current.
+
 You are building a small working prototype for a hiring assessment. Reviewers judge:
 finding the right problem, using numbers, pragmatic tech choices, clean code. They say
 polish doesn't matter. A small, correct, well-tested tool beats a big one.

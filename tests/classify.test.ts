@@ -48,7 +48,7 @@ function failingClassifier(id: string): RejectionClassifier {
 
 function makeDeps(overrides: Partial<ClassifyDeps> = {}): ClassifyDeps {
   return {
-    primary: succeedingClassifier("claude-haiku-4-5"),
+    primary: succeedingClassifier("gemini-3.5-flash-lite"),
     fallback: keywordClassifier,
     findClient: (id) => (id === CLIENT.id ? CLIENT : undefined),
     findCandidate: (id) => (id === CANDIDATE.id ? CANDIDATE : undefined),
@@ -112,27 +112,29 @@ describe("handleClassify classification", () => {
 
     expect(result.status).toBe(200);
     expect(result.body).toMatchObject({
-      classifierUsed: "claude-haiku-4-5",
+      classifierUsed: "gemini-3.5-flash-lite",
       fallbackReason: null,
     });
   });
 
   it("falls back and says why when the primary classifier throws", async () => {
-    const deps = makeDeps({ primary: failingClassifier("claude-haiku-4-5") });
+    const deps = makeDeps({
+      primary: failingClassifier("gemini-3.5-flash-lite"),
+    });
 
     const result = await handleClassify(VALID_BODY, deps);
 
     expect(result.status).toBe(200);
     expect(result.body).toMatchObject({
       classifierUsed: "keyword-fallback",
-      fallbackReason: expect.stringContaining("claude-haiku-4-5"),
+      fallbackReason: expect.stringContaining("gemini-3.5-flash-lite"),
     });
   });
 
   it("logs the failure with ids and error details but not the feedback", async () => {
     const logError = vi.fn();
     const deps = makeDeps({
-      primary: failingClassifier("claude-haiku-4-5"),
+      primary: failingClassifier("gemini-3.5-flash-lite"),
       logError,
     });
 
@@ -141,7 +143,7 @@ describe("handleClassify classification", () => {
     expect(logError).toHaveBeenCalledWith(expect.any(String), {
       clientId: CLIENT.id,
       candidateId: CANDIDATE.id,
-      classifierId: "claude-haiku-4-5",
+      classifierId: "gemini-3.5-flash-lite",
       errorName: "TypeError",
       errorMessage: "upstream timed out",
     });
@@ -159,7 +161,9 @@ describe("handleClassify classification", () => {
 
   it("classifies the trimmed feedback text", async () => {
     const classify = vi.fn(async () => SMOKING_CLASSIFICATION);
-    const deps = makeDeps({ primary: { id: "claude-haiku-4-5", classify } });
+    const deps = makeDeps({
+      primary: { id: "gemini-3.5-flash-lite", classify },
+    });
 
     await handleClassify({ ...VALID_BODY, feedbackText: "  smokes  " }, deps);
 
@@ -192,7 +196,7 @@ describe("handleClassify suggestions", () => {
     };
     const deps = makeDeps({
       primary: {
-        id: "claude-haiku-4-5",
+        id: "gemini-3.5-flash-lite",
         classify: async () => ({
           ...SMOKING_CLASSIFICATION,
           reasons: [DRINKING_REASON],

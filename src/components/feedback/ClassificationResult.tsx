@@ -52,7 +52,7 @@ export function ClassificationResult({
       title="Verdict"
       meta={
         <Tag tone={isKeyword ? "neutral" : "accent"}>
-          {isKeyword ? "Keyword fallback" : `Claude · ${classifierUsed}`}
+          {isKeyword ? "Keyword fallback" : `Gemini · ${classifierUsed}`}
         </Tag>
       }
     >
