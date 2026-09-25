@@ -1,0 +1,6007 @@
+[
+  {
+    "id": "cl_001",
+    "name": "Ketaki Kulkarni",
+    "gender": "female",
+    "age": 29,
+    "heightCm": 168,
+    "city": "Mumbai",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Maratha",
+    "motherTongue": "Marathi",
+    "education": "masters",
+    "profession": "Civil servant",
+    "incomeBandLakhs": "50+",
+    "familyType": "nuclear",
+    "bio": "Civil servant who enjoys Carnatic music and long drives.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_001_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_001_age",
+          "kind": "range",
+          "field": "age",
+          "min": 27,
+          "max": 33,
+          "label": "Age 27–33",
+          "source": "intake"
+        },
+        {
+          "id": "cl_001_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_001_drinking",
+          "label": "Non-drinker only",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "socially",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_001_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_001_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 2,
+          "label": "Prefers a nuclear family"
+        },
+        {
+          "id": "cl_001_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 3,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_001_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Marathi"
+          ],
+          "weight": 1,
+          "label": "Prefers a Marathi speaker"
+        },
+        {
+          "id": "cl_001_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 2,
+          "label": "Prefers someone in tech"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_002",
+    "name": "Rutuja Patil",
+    "gender": "female",
+    "age": 32,
+    "heightCm": 154,
+    "city": "Mumbai",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "non_veg",
+    "religion": "Hindu",
+    "community": "Deshastha Brahmin",
+    "motherTongue": "Marathi",
+    "education": "bachelors",
+    "profession": "Consultant",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Consultant who enjoys Carnatic music and badminton.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_002_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_002_hasChildren",
+          "label": "No children from a previous marriage",
+          "kind": "equals",
+          "field": "hasChildren",
+          "value": false,
+          "source": "intake"
+        },
+        {
+          "id": "cl_002_heightCm",
+          "kind": "range",
+          "field": "heightCm",
+          "min": 168,
+          "label": "Height 168 cm or more",
+          "source": "intake"
+        },
+        {
+          "id": "cl_002_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_002_community",
+          "label": "Brahmin communities only",
+          "kind": "oneOf",
+          "field": "community",
+          "allowed": [
+            "Deshastha Brahmin",
+            "Niyogi Brahmin",
+            "Iyer",
+            "Iyengar",
+            "Madhwa Brahmin",
+            "Bengali Brahmin",
+            "Nagar Brahmin"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_002_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_002_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 2,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_002_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_002_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_003",
+    "name": "Ritwik Ghosh",
+    "gender": "male",
+    "age": 31,
+    "heightCm": 184,
+    "city": "Kolkata",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "occasionally",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Baidya",
+    "motherTongue": "Bengali",
+    "education": "professional",
+    "profession": "Software engineer",
+    "incomeBandLakhs": "10-25",
+    "familyType": "joint",
+    "bio": "Software engineer who enjoys long drives and board games.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_003_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_003_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_003_age",
+          "kind": "range",
+          "field": "age",
+          "min": 27,
+          "max": 33,
+          "label": "Age 27–33",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_003_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Bengali"
+          ],
+          "weight": 1,
+          "label": "Prefers a Bengali speaker"
+        },
+        {
+          "id": "cl_003_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "joint"
+          ],
+          "weight": 2,
+          "label": "Prefers a joint family"
+        },
+        {
+          "id": "cl_003_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 3,
+          "label": "Prefers a postgraduate"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_004",
+    "name": "Karthik Reddy",
+    "gender": "male",
+    "age": 34,
+    "heightCm": 187,
+    "city": "Hyderabad",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "open",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "non_veg",
+    "religion": "Hindu",
+    "community": "Kamma",
+    "motherTongue": "Telugu",
+    "education": "bachelors",
+    "profession": "Lawyer",
+    "incomeBandLakhs": "25-50",
+    "familyType": "joint",
+    "bio": "Lawyer who enjoys baking and cricket.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_004_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_004_drinking",
+          "label": "Non-drinker only",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "socially",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_004_hasChildren",
+          "label": "No children from a previous marriage",
+          "kind": "equals",
+          "field": "hasChildren",
+          "value": false,
+          "source": "intake"
+        },
+        {
+          "id": "cl_004_heightCm",
+          "kind": "range",
+          "field": "heightCm",
+          "max": 168,
+          "label": "Height up to 168 cm",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_004_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "joint"
+          ],
+          "weight": 3,
+          "label": "Prefers a joint family"
+        },
+        {
+          "id": "cl_004_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 2,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_004_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_005",
+    "name": "Siddharth Natarajan",
+    "gender": "male",
+    "age": 36,
+    "heightCm": 186,
+    "city": "Chennai",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Mudaliar",
+    "motherTongue": "Tamil",
+    "education": "professional",
+    "profession": "Consultant",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Consultant who enjoys filter coffee and trekking.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_005_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_005_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_005_hasChildren",
+          "label": "No children from a previous marriage",
+          "kind": "equals",
+          "field": "hasChildren",
+          "value": false,
+          "source": "intake"
+        },
+        {
+          "id": "cl_005_age",
+          "kind": "range",
+          "field": "age",
+          "min": 32,
+          "max": 37,
+          "label": "Age 32–37",
+          "source": "intake"
+        },
+        {
+          "id": "cl_005_city",
+          "kind": "location",
+          "allowedCities": [
+            "Chennai",
+            "Mumbai"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Chennai or Mumbai, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_005_drinking",
+          "label": "Non-drinker only",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "socially",
+            "regularly"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_005_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_005_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 2,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_005_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 3,
+          "label": "Prefers a nuclear family"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_006",
+    "name": "Sinchana Shetty",
+    "gender": "female",
+    "age": 33,
+    "heightCm": 151,
+    "city": "Bengaluru",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "occasionally",
+    "drinking": "never",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Madhwa Brahmin",
+    "motherTongue": "Kannada",
+    "education": "bachelors",
+    "profession": "Consultant",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Consultant who enjoys stand-up comedy and cricket.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_006_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_006_religion",
+          "kind": "oneOf",
+          "field": "religion",
+          "allowed": [
+            "Hindu"
+          ],
+          "label": "Hindu only",
+          "source": "intake"
+        },
+        {
+          "id": "cl_006_heightCm",
+          "kind": "range",
+          "field": "heightCm",
+          "min": 168,
+          "label": "Height 168 cm or more",
+          "source": "intake"
+        },
+        {
+          "id": "cl_006_diet",
+          "label": "Vegetarian only",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "jain"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_006_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_006_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_006_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 2,
+          "label": "Prefers income above ₹25 L"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_007",
+    "name": "Karthik Chowdary",
+    "gender": "male",
+    "age": 28,
+    "heightCm": 180,
+    "city": "Hyderabad",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Niyogi Brahmin",
+    "motherTongue": "Telugu",
+    "education": "masters",
+    "profession": "Lawyer",
+    "incomeBandLakhs": "10-25",
+    "familyType": "joint",
+    "bio": "Lawyer who enjoys cricket and Carnatic music.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_007_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_007_diet",
+          "label": "Vegetarian only",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "jain"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_007_hasChildren",
+          "label": "No children from a previous marriage",
+          "kind": "equals",
+          "field": "hasChildren",
+          "value": false,
+          "source": "intake"
+        },
+        {
+          "id": "cl_007_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_007_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "joint"
+          ],
+          "weight": 3,
+          "label": "Prefers a joint family"
+        },
+        {
+          "id": "cl_007_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_007_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Telugu"
+          ],
+          "weight": 1,
+          "label": "Prefers a Telugu speaker"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_008",
+    "name": "Sameer Qureshi",
+    "gender": "male",
+    "age": 31,
+    "heightCm": 173,
+    "city": "Hyderabad",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Muslim",
+    "community": "Shia",
+    "motherTongue": "Urdu",
+    "education": "doctorate",
+    "profession": "Software engineer",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Software engineer who enjoys badminton and board games.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_008_city",
+          "kind": "location",
+          "allowedCities": [
+            "Hyderabad",
+            "Pune"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Hyderabad or Pune, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_008_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_008_hasChildren",
+          "label": "No children from a previous marriage",
+          "kind": "equals",
+          "field": "hasChildren",
+          "value": false,
+          "source": "intake"
+        },
+        {
+          "id": "cl_008_age",
+          "kind": "range",
+          "field": "age",
+          "min": 25,
+          "max": 31,
+          "label": "Age 25–31",
+          "source": "intake"
+        },
+        {
+          "id": "cl_008_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_008_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_008_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 2,
+          "label": "Prefers income above ₹25 L"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_009",
+    "name": "Kunal Agarwal",
+    "gender": "male",
+    "age": 33,
+    "heightCm": 181,
+    "city": "Delhi NCR",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "open",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "eggetarian",
+    "religion": "Hindu",
+    "community": "Agarwal",
+    "motherTongue": "Hindi",
+    "education": "bachelors",
+    "profession": "Data scientist",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Data scientist who enjoys Carnatic music and cricket.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_009_city",
+          "kind": "location",
+          "allowedCities": [
+            "Delhi NCR",
+            "Mumbai"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Delhi NCR or Mumbai, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_009_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_009_drinking",
+          "label": "Non-drinker only",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "socially",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_009_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_009_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 3,
+          "label": "Prefers a nuclear family"
+        },
+        {
+          "id": "cl_009_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "max": 165
+          },
+          "weight": 3,
+          "label": "Prefers 165 cm or shorter"
+        },
+        {
+          "id": "cl_009_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 2,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_009_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 3,
+          "label": "Prefers someone in tech"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_010",
+    "name": "Tejas Gokhale",
+    "gender": "male",
+    "age": 29,
+    "heightCm": 164,
+    "city": "London",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "occasionally",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Deshastha Brahmin",
+    "motherTongue": "Marathi",
+    "education": "bachelors",
+    "profession": "Software engineer",
+    "incomeBandLakhs": "25-50",
+    "familyType": "joint",
+    "bio": "Software engineer who enjoys trekking and cricket.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_010_city",
+          "kind": "location",
+          "allowedCities": [
+            "London",
+            "Delhi NCR"
+          ],
+          "acceptIfOpenToRelocate": false,
+          "label": "Lives in London or Delhi NCR",
+          "source": "intake"
+        },
+        {
+          "id": "cl_010_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_010_community",
+          "label": "Brahmin communities only",
+          "kind": "oneOf",
+          "field": "community",
+          "allowed": [
+            "Deshastha Brahmin",
+            "Niyogi Brahmin",
+            "Iyer",
+            "Iyengar",
+            "Madhwa Brahmin",
+            "Bengali Brahmin",
+            "Nagar Brahmin"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_010_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_010_age",
+          "kind": "range",
+          "field": "age",
+          "min": 25,
+          "max": 29,
+          "label": "Age 25–29",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_010_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Marathi"
+          ],
+          "weight": 1,
+          "label": "Prefers a Marathi speaker"
+        },
+        {
+          "id": "cl_010_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "joint"
+          ],
+          "weight": 3,
+          "label": "Prefers a joint family"
+        },
+        {
+          "id": "cl_010_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "max": 159
+          },
+          "weight": 3,
+          "label": "Prefers 159 cm or shorter"
+        },
+        {
+          "id": "cl_010_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 2,
+          "label": "Prefers someone in tech"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_011",
+    "name": "Shruti Agarwal",
+    "gender": "female",
+    "age": 32,
+    "heightCm": 167,
+    "city": "Dubai",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "open",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Kayastha",
+    "motherTongue": "Hindi",
+    "education": "professional",
+    "profession": "Consultant",
+    "incomeBandLakhs": "50+",
+    "familyType": "nuclear",
+    "bio": "Consultant who enjoys badminton and cricket.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_011_city",
+          "kind": "location",
+          "allowedCities": [
+            "Dubai",
+            "Bengaluru"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Dubai or Bengaluru, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_011_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_011_age",
+          "kind": "range",
+          "field": "age",
+          "min": 30,
+          "max": 38,
+          "label": "Age 30–38",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_011_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_011_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 2,
+          "label": "Prefers a nuclear family"
+        },
+        {
+          "id": "cl_011_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Hindi"
+          ],
+          "weight": 3,
+          "label": "Prefers a Hindi speaker"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_012",
+    "name": "Kunal Srivastava",
+    "gender": "male",
+    "age": 37,
+    "heightCm": 188,
+    "city": "Delhi NCR",
+    "openToRelocate": false,
+    "maritalStatus": "widowed",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "occasionally",
+    "drinking": "socially",
+    "diet": "non_veg",
+    "religion": "Hindu",
+    "community": "Agarwal",
+    "motherTongue": "Hindi",
+    "education": "bachelors",
+    "profession": "Product manager",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Product manager who enjoys Carnatic music and badminton.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_012_city",
+          "kind": "location",
+          "allowedCities": [
+            "Delhi NCR",
+            "Hyderabad"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Delhi NCR or Hyderabad, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_012_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_012_religion",
+          "kind": "oneOf",
+          "field": "religion",
+          "allowed": [
+            "Hindu"
+          ],
+          "label": "Hindu only",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_012_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Hindi"
+          ],
+          "weight": 2,
+          "label": "Prefers a Hindi speaker"
+        },
+        {
+          "id": "cl_012_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "max": 165
+          },
+          "weight": 3,
+          "label": "Prefers 165 cm or shorter"
+        },
+        {
+          "id": "cl_012_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 1,
+          "label": "Prefers income above ₹25 L"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_013",
+    "name": "Sana Siddiqui",
+    "gender": "female",
+    "age": 26,
+    "heightCm": 161,
+    "city": "Hyderabad",
+    "openToRelocate": false,
+    "maritalStatus": "divorced",
+    "hasChildren": false,
+    "wantsChildren": "open",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "non_veg",
+    "religion": "Muslim",
+    "community": "Sunni",
+    "motherTongue": "Urdu",
+    "education": "professional",
+    "profession": "Doctor",
+    "incomeBandLakhs": "50+",
+    "familyType": "nuclear",
+    "bio": "Doctor who enjoys trekking and stand-up comedy.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_013_city",
+          "kind": "location",
+          "allowedCities": [
+            "Hyderabad",
+            "Mumbai"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Hyderabad or Mumbai, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_013_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_013_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_013_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 3,
+          "label": "Prefers a nuclear family"
+        },
+        {
+          "id": "cl_013_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_014",
+    "name": "Pranav Subramanian",
+    "gender": "male",
+    "age": 30,
+    "heightCm": 171,
+    "city": "Chennai",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "open",
+    "smoking": "regularly",
+    "drinking": "never",
+    "diet": "eggetarian",
+    "religion": "Hindu",
+    "community": "Mudaliar",
+    "motherTongue": "Tamil",
+    "education": "masters",
+    "profession": "Investment banker",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Investment banker who enjoys stand-up comedy and filter coffee.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_014_city",
+          "kind": "location",
+          "allowedCities": [
+            "Chennai",
+            "Pune"
+          ],
+          "acceptIfOpenToRelocate": false,
+          "label": "Lives in Chennai or Pune",
+          "source": "intake"
+        },
+        {
+          "id": "cl_014_drinking",
+          "label": "Non-drinker only",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "socially",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_014_age",
+          "kind": "range",
+          "field": "age",
+          "min": 25,
+          "max": 31,
+          "label": "Age 25–31",
+          "source": "intake"
+        },
+        {
+          "id": "cl_014_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_014_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "max": 165
+          },
+          "weight": 2,
+          "label": "Prefers 165 cm or shorter"
+        },
+        {
+          "id": "cl_014_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 1,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_014_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 3,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_014_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 3,
+          "label": "Prefers a nuclear family"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_015",
+    "name": "Aishwarya Subramanian",
+    "gender": "female",
+    "age": 31,
+    "heightCm": 155,
+    "city": "Chennai",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Iyengar",
+    "motherTongue": "Tamil",
+    "education": "bachelors",
+    "profession": "Startup founder",
+    "incomeBandLakhs": "50+",
+    "familyType": "joint",
+    "bio": "Startup founder who enjoys Carnatic music and baking.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_015_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_015_city",
+          "kind": "location",
+          "allowedCities": [
+            "Chennai",
+            "Hyderabad"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Chennai or Hyderabad, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_015_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_015_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "joint"
+          ],
+          "weight": 1,
+          "label": "Prefers a joint family"
+        },
+        {
+          "id": "cl_015_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 1,
+          "label": "Prefers a postgraduate"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_016",
+    "name": "Pooja Agarwal",
+    "gender": "female",
+    "age": 25,
+    "heightCm": 171,
+    "city": "Delhi NCR",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "eggetarian",
+    "religion": "Hindu",
+    "community": "Agarwal",
+    "motherTongue": "Hindi",
+    "education": "doctorate",
+    "profession": "Consultant",
+    "incomeBandLakhs": "25-50",
+    "familyType": "joint",
+    "bio": "Consultant who enjoys board games and filter coffee.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_016_drinking",
+          "label": "Non-drinker only",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "socially",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_016_age",
+          "kind": "range",
+          "field": "age",
+          "min": 23,
+          "max": 30,
+          "label": "Age 23–30",
+          "source": "intake"
+        },
+        {
+          "id": "cl_016_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_016_city",
+          "kind": "location",
+          "allowedCities": [
+            "Delhi NCR",
+            "Bengaluru"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Delhi NCR or Bengaluru, or open to relocate",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_016_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Hindi"
+          ],
+          "weight": 1,
+          "label": "Prefers a Hindi speaker"
+        },
+        {
+          "id": "cl_016_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 1,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_016_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "min": 179
+          },
+          "weight": 2,
+          "label": "Prefers 179 cm or taller"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_017",
+    "name": "Shruti Sharma",
+    "gender": "female",
+    "age": 27,
+    "heightCm": 171,
+    "city": "Dubai",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "regularly",
+    "drinking": "never",
+    "diet": "non_veg",
+    "religion": "Hindu",
+    "community": "Agarwal",
+    "motherTongue": "Hindi",
+    "education": "professional",
+    "profession": "Investment banker",
+    "incomeBandLakhs": "25-50",
+    "familyType": "nuclear",
+    "bio": "Investment banker who enjoys badminton and board games.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_017_drinking",
+          "label": "Non-drinker only",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "socially",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_017_hasChildren",
+          "label": "No children from a previous marriage",
+          "kind": "equals",
+          "field": "hasChildren",
+          "value": false,
+          "source": "intake"
+        },
+        {
+          "id": "cl_017_age",
+          "kind": "range",
+          "field": "age",
+          "min": 25,
+          "max": 31,
+          "label": "Age 25–31",
+          "source": "intake"
+        },
+        {
+          "id": "cl_017_religion",
+          "kind": "oneOf",
+          "field": "religion",
+          "allowed": [
+            "Hindu"
+          ],
+          "label": "Hindu only",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_017_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 3,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_017_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_017_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 1,
+          "label": "Prefers a nuclear family"
+        },
+        {
+          "id": "cl_017_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_018",
+    "name": "Ananya Saxena",
+    "gender": "female",
+    "age": 28,
+    "heightCm": 165,
+    "city": "Delhi NCR",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Agarwal",
+    "motherTongue": "Hindi",
+    "education": "masters",
+    "profession": "Software engineer",
+    "incomeBandLakhs": "25-50",
+    "familyType": "nuclear",
+    "bio": "Software engineer who enjoys reading history and trekking.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_018_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_018_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_018_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_018_age",
+          "kind": "range",
+          "field": "age",
+          "min": 27,
+          "max": 33,
+          "label": "Age 27–33",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_018_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 2,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_018_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_018_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_019",
+    "name": "Sravya Reddy",
+    "gender": "female",
+    "age": 27,
+    "heightCm": 152,
+    "city": "Hyderabad",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Reddy",
+    "motherTongue": "Telugu",
+    "education": "bachelors",
+    "profession": "Investment banker",
+    "incomeBandLakhs": "10-25",
+    "familyType": "joint",
+    "bio": "Investment banker who enjoys baking and long drives.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_019_diet",
+          "label": "Vegetarian only",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "jain"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_019_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_019_age",
+          "kind": "range",
+          "field": "age",
+          "min": 27,
+          "max": 33,
+          "label": "Age 27–33",
+          "source": "intake"
+        },
+        {
+          "id": "cl_019_city",
+          "kind": "location",
+          "allowedCities": [
+            "Hyderabad",
+            "Bengaluru"
+          ],
+          "acceptIfOpenToRelocate": false,
+          "label": "Lives in Hyderabad or Bengaluru",
+          "source": "intake"
+        },
+        {
+          "id": "cl_019_religion",
+          "kind": "oneOf",
+          "field": "religion",
+          "allowed": [
+            "Hindu"
+          ],
+          "label": "Hindu only",
+          "source": "intake"
+        },
+        {
+          "id": "cl_019_heightCm",
+          "kind": "range",
+          "field": "heightCm",
+          "min": 168,
+          "label": "Height 168 cm or more",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_019_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Telugu"
+          ],
+          "weight": 3,
+          "label": "Prefers a Telugu speaker"
+        },
+        {
+          "id": "cl_019_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 1,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_019_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 2,
+          "label": "Prefers income above ₹25 L"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_020",
+    "name": "Vignesh Krishnan",
+    "gender": "male",
+    "age": 26,
+    "heightCm": 186,
+    "city": "Chennai",
+    "openToRelocate": true,
+    "maritalStatus": "widowed",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Mudaliar",
+    "motherTongue": "Tamil",
+    "education": "bachelors",
+    "profession": "Software engineer",
+    "incomeBandLakhs": "<10",
+    "familyType": "nuclear",
+    "bio": "Software engineer who enjoys stand-up comedy and badminton.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_020_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_020_age",
+          "kind": "range",
+          "field": "age",
+          "min": 22,
+          "max": 27,
+          "label": "Age 22–27",
+          "source": "intake"
+        },
+        {
+          "id": "cl_020_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_020_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "max": 165
+          },
+          "weight": 1,
+          "label": "Prefers 165 cm or shorter"
+        },
+        {
+          "id": "cl_020_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 3,
+          "label": "Prefers income above ₹25 L"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_021",
+    "name": "Sayali Joshi",
+    "gender": "female",
+    "age": 30,
+    "heightCm": 168,
+    "city": "Pune",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Maratha",
+    "motherTongue": "Marathi",
+    "education": "doctorate",
+    "profession": "Consultant",
+    "incomeBandLakhs": "25-50",
+    "familyType": "joint",
+    "bio": "Consultant who enjoys cricket and baking.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_021_age",
+          "kind": "range",
+          "field": "age",
+          "min": 28,
+          "max": 34,
+          "label": "Age 28–34",
+          "source": "intake"
+        },
+        {
+          "id": "cl_021_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_021_diet",
+          "label": "Vegetarian only",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "jain"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_021_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 1,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_021_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_022",
+    "name": "Aishwarya Natarajan",
+    "gender": "female",
+    "age": 30,
+    "heightCm": 153,
+    "city": "Chennai",
+    "openToRelocate": true,
+    "maritalStatus": "widowed",
+    "hasChildren": true,
+    "wantsChildren": "no",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "eggetarian",
+    "religion": "Hindu",
+    "community": "Iyengar",
+    "motherTongue": "Tamil",
+    "education": "bachelors",
+    "profession": "Architect",
+    "incomeBandLakhs": "50+",
+    "familyType": "nuclear",
+    "bio": "Architect who enjoys stand-up comedy and board games.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_022_age",
+          "kind": "range",
+          "field": "age",
+          "min": 28,
+          "max": 35,
+          "label": "Age 28–35",
+          "source": "intake"
+        },
+        {
+          "id": "cl_022_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_022_heightCm",
+          "kind": "range",
+          "field": "heightCm",
+          "min": 168,
+          "label": "Height 168 cm or more",
+          "source": "intake"
+        },
+        {
+          "id": "cl_022_city",
+          "kind": "location",
+          "allowedCities": [
+            "Chennai",
+            "Bengaluru"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Chennai or Bengaluru, or open to relocate",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_022_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 2,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_022_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 1,
+          "label": "Prefers a nuclear family"
+        },
+        {
+          "id": "cl_022_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 2,
+          "label": "Prefers someone in tech"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_023",
+    "name": "Sayan Sen",
+    "gender": "male",
+    "age": 35,
+    "heightCm": 177,
+    "city": "Kolkata",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "non_veg",
+    "religion": "Hindu",
+    "community": "Kayastha",
+    "motherTongue": "Bengali",
+    "education": "professional",
+    "profession": "Product manager",
+    "incomeBandLakhs": "<10",
+    "familyType": "nuclear",
+    "bio": "Product manager who enjoys board games and baking.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_023_age",
+          "kind": "range",
+          "field": "age",
+          "min": 30,
+          "max": 36,
+          "label": "Age 30–36",
+          "source": "intake"
+        },
+        {
+          "id": "cl_023_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_023_religion",
+          "kind": "oneOf",
+          "field": "religion",
+          "allowed": [
+            "Hindu"
+          ],
+          "label": "Hindu only",
+          "source": "intake"
+        },
+        {
+          "id": "cl_023_drinking",
+          "label": "Non-drinker only",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "socially",
+            "regularly"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_023_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_023_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Bengali"
+          ],
+          "weight": 2,
+          "label": "Prefers a Bengali speaker"
+        },
+        {
+          "id": "cl_023_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 2,
+          "label": "Prefers a nuclear family"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_024",
+    "name": "Aniket Gokhale",
+    "gender": "male",
+    "age": 27,
+    "heightCm": 187,
+    "city": "Mumbai",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "CKP",
+    "motherTongue": "Marathi",
+    "education": "masters",
+    "profession": "Data scientist",
+    "incomeBandLakhs": "25-50",
+    "familyType": "joint",
+    "bio": "Data scientist who enjoys Carnatic music and stand-up comedy.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_024_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_024_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_024_city",
+          "kind": "location",
+          "allowedCities": [
+            "Mumbai",
+            "Pune"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Mumbai or Pune, or open to relocate",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_024_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 2,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_024_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "max": 165
+          },
+          "weight": 3,
+          "label": "Prefers 165 cm or shorter"
+        },
+        {
+          "id": "cl_024_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "joint"
+          ],
+          "weight": 1,
+          "label": "Prefers a joint family"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_025",
+    "name": "Reshma Kurian",
+    "gender": "female",
+    "age": 28,
+    "heightCm": 160,
+    "city": "SF Bay Area",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Christian",
+    "community": "Latin Catholic",
+    "motherTongue": "Malayalam",
+    "education": "masters",
+    "profession": "Doctor",
+    "incomeBandLakhs": "10-25",
+    "familyType": "joint",
+    "bio": "Doctor who enjoys cricket and baking.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_025_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_025_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_025_age",
+          "kind": "range",
+          "field": "age",
+          "min": 28,
+          "max": 33,
+          "label": "Age 28–33",
+          "source": "intake"
+        },
+        {
+          "id": "cl_025_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_025_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_025_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "min": 172
+          },
+          "weight": 3,
+          "label": "Prefers 172 cm or taller"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_026",
+    "name": "Chaitra Bhat",
+    "gender": "female",
+    "age": 25,
+    "heightCm": 157,
+    "city": "Bengaluru",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Vokkaliga",
+    "motherTongue": "Kannada",
+    "education": "masters",
+    "profession": "Software engineer",
+    "incomeBandLakhs": "25-50",
+    "familyType": "nuclear",
+    "bio": "Software engineer who enjoys cricket and baking.",
+    "matchmakerId": "mm_a",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_026_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_026_heightCm",
+          "kind": "range",
+          "field": "heightCm",
+          "min": 168,
+          "label": "Height 168 cm or more",
+          "source": "intake"
+        },
+        {
+          "id": "cl_026_drinking",
+          "label": "Non-drinker only",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "socially",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_026_age",
+          "kind": "range",
+          "field": "age",
+          "min": 24,
+          "max": 30,
+          "label": "Age 24–30",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_026_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 1,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_026_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 2,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_026_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 1,
+          "label": "Prefers a postgraduate"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_027",
+    "name": "Ayesha Ansari",
+    "gender": "female",
+    "age": 24,
+    "heightCm": 171,
+    "city": "Hyderabad",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Muslim",
+    "community": "Shia",
+    "motherTongue": "Urdu",
+    "education": "masters",
+    "profession": "Product manager",
+    "incomeBandLakhs": "50+",
+    "familyType": "joint",
+    "bio": "Product manager who enjoys stand-up comedy and reading history.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_027_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_027_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_027_diet",
+          "label": "Vegetarian only",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "jain"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_027_age",
+          "kind": "range",
+          "field": "age",
+          "min": 24,
+          "max": 30,
+          "label": "Age 24–30",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_027_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "joint"
+          ],
+          "weight": 3,
+          "label": "Prefers a joint family"
+        },
+        {
+          "id": "cl_027_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_027_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "min": 179
+          },
+          "weight": 1,
+          "label": "Prefers 179 cm or taller"
+        },
+        {
+          "id": "cl_027_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 1,
+          "label": "Prefers income above ₹25 L"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_028",
+    "name": "Pooja Agarwal",
+    "gender": "female",
+    "age": 33,
+    "heightCm": 165,
+    "city": "Delhi NCR",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "open",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Kayastha",
+    "motherTongue": "Hindi",
+    "education": "masters",
+    "profession": "Professor",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Professor who enjoys badminton and board games.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_028_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_028_wantsChildren",
+          "label": "Child-free, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "no",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_028_diet",
+          "label": "Vegetarian only",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "jain"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_028_religion",
+          "kind": "oneOf",
+          "field": "religion",
+          "allowed": [
+            "Hindu"
+          ],
+          "label": "Hindu only",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_028_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Hindi"
+          ],
+          "weight": 2,
+          "label": "Prefers a Hindi speaker"
+        },
+        {
+          "id": "cl_028_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_028_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "min": 173
+          },
+          "weight": 2,
+          "label": "Prefers 173 cm or taller"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_029",
+    "name": "Abhishek Sharma",
+    "gender": "male",
+    "age": 37,
+    "heightCm": 164,
+    "city": "Dubai",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "regularly",
+    "diet": "eggetarian",
+    "religion": "Hindu",
+    "community": "Agarwal",
+    "motherTongue": "Hindi",
+    "education": "masters",
+    "profession": "Architect",
+    "incomeBandLakhs": "50+",
+    "familyType": "nuclear",
+    "bio": "Architect who enjoys long drives and reading history.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_029_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_029_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_029_age",
+          "kind": "range",
+          "field": "age",
+          "min": 31,
+          "max": 37,
+          "label": "Age 31–37",
+          "source": "intake"
+        },
+        {
+          "id": "cl_029_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_029_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_029_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 3,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_029_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Hindi"
+          ],
+          "weight": 1,
+          "label": "Prefers a Hindi speaker"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_030",
+    "name": "Omkar Patil",
+    "gender": "male",
+    "age": 35,
+    "heightCm": 182,
+    "city": "Mumbai",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "non_veg",
+    "religion": "Hindu",
+    "community": "Deshastha Brahmin",
+    "motherTongue": "Marathi",
+    "education": "bachelors",
+    "profession": "Data scientist",
+    "incomeBandLakhs": "10-25",
+    "familyType": "joint",
+    "bio": "Data scientist who enjoys board games and long drives.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_030_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_030_religion",
+          "kind": "oneOf",
+          "field": "religion",
+          "allowed": [
+            "Hindu"
+          ],
+          "label": "Hindu only",
+          "source": "intake"
+        },
+        {
+          "id": "cl_030_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_030_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_030_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 2,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_030_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_030_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "max": 165
+          },
+          "weight": 1,
+          "label": "Prefers 165 cm or shorter"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_031",
+    "name": "Spoorthi Shetty",
+    "gender": "female",
+    "age": 31,
+    "heightCm": 164,
+    "city": "London",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "no",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "non_veg",
+    "religion": "Hindu",
+    "community": "Madhwa Brahmin",
+    "motherTongue": "Kannada",
+    "education": "doctorate",
+    "profession": "Investment banker",
+    "incomeBandLakhs": "25-50",
+    "familyType": "joint",
+    "bio": "Investment banker who enjoys stand-up comedy and cricket.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_031_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_031_age",
+          "kind": "range",
+          "field": "age",
+          "min": 29,
+          "max": 35,
+          "label": "Age 29–35",
+          "source": "intake"
+        },
+        {
+          "id": "cl_031_community",
+          "label": "Brahmin communities only",
+          "kind": "oneOf",
+          "field": "community",
+          "allowed": [
+            "Deshastha Brahmin",
+            "Niyogi Brahmin",
+            "Iyer",
+            "Iyengar",
+            "Madhwa Brahmin",
+            "Bengali Brahmin",
+            "Nagar Brahmin"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_031_religion",
+          "kind": "oneOf",
+          "field": "religion",
+          "allowed": [
+            "Hindu"
+          ],
+          "label": "Hindu only",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_031_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 2,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_031_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "min": 172
+          },
+          "weight": 1,
+          "label": "Prefers 172 cm or taller"
+        },
+        {
+          "id": "cl_031_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 3,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_031_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Kannada"
+          ],
+          "weight": 3,
+          "label": "Prefers a Kannada speaker"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_032",
+    "name": "Gauri Joshi",
+    "gender": "female",
+    "age": 29,
+    "heightCm": 154,
+    "city": "Pune",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "regularly",
+    "diet": "eggetarian",
+    "religion": "Hindu",
+    "community": "Deshastha Brahmin",
+    "motherTongue": "Marathi",
+    "education": "masters",
+    "profession": "Software engineer",
+    "incomeBandLakhs": "25-50",
+    "familyType": "joint",
+    "bio": "Software engineer who enjoys board games and baking.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_032_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_032_age",
+          "kind": "range",
+          "field": "age",
+          "min": 27,
+          "max": 34,
+          "label": "Age 27–34",
+          "source": "intake"
+        },
+        {
+          "id": "cl_032_heightCm",
+          "kind": "range",
+          "field": "heightCm",
+          "min": 168,
+          "label": "Height 168 cm or more",
+          "source": "intake"
+        },
+        {
+          "id": "cl_032_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_032_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_032_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Marathi"
+          ],
+          "weight": 1,
+          "label": "Prefers a Marathi speaker"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_033",
+    "name": "Harpreet Gill",
+    "gender": "male",
+    "age": 29,
+    "heightCm": 171,
+    "city": "Delhi NCR",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "non_veg",
+    "religion": "Sikh",
+    "community": "Jat Sikh",
+    "motherTongue": "Punjabi",
+    "education": "doctorate",
+    "profession": "Software engineer",
+    "incomeBandLakhs": "50+",
+    "familyType": "joint",
+    "bio": "Software engineer who enjoys long drives and badminton.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_033_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_033_religion",
+          "kind": "oneOf",
+          "field": "religion",
+          "allowed": [
+            "Sikh",
+            "Hindu"
+          ],
+          "label": "Sikh or Hindu only",
+          "source": "intake"
+        },
+        {
+          "id": "cl_033_hasChildren",
+          "label": "No children from a previous marriage",
+          "kind": "equals",
+          "field": "hasChildren",
+          "value": false,
+          "source": "intake"
+        },
+        {
+          "id": "cl_033_age",
+          "kind": "range",
+          "field": "age",
+          "min": 24,
+          "max": 30,
+          "label": "Age 24–30",
+          "source": "intake"
+        },
+        {
+          "id": "cl_033_drinking",
+          "label": "Non-drinker only",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "socially",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_033_city",
+          "kind": "location",
+          "allowedCities": [
+            "Delhi NCR",
+            "Pune"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Delhi NCR or Pune, or open to relocate",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_033_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 1,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_033_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "max": 165
+          },
+          "weight": 1,
+          "label": "Prefers 165 cm or shorter"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_034",
+    "name": "Jobin Kurian",
+    "gender": "male",
+    "age": 26,
+    "heightCm": 170,
+    "city": "Chennai",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "open",
+    "smoking": "never",
+    "drinking": "regularly",
+    "diet": "veg",
+    "religion": "Christian",
+    "community": "Latin Catholic",
+    "motherTongue": "Malayalam",
+    "education": "masters",
+    "profession": "Product manager",
+    "incomeBandLakhs": "10-25",
+    "familyType": "joint",
+    "bio": "Product manager who enjoys badminton and long drives.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_034_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_034_city",
+          "kind": "location",
+          "allowedCities": [
+            "Chennai",
+            "Hyderabad"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Chennai or Hyderabad, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_034_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_034_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 3,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_034_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Malayalam"
+          ],
+          "weight": 1,
+          "label": "Prefers a Malayalam speaker"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_035",
+    "name": "Nandhini Krishnan",
+    "gender": "female",
+    "age": 25,
+    "heightCm": 159,
+    "city": "Chennai",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "open",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Iyer",
+    "motherTongue": "Tamil",
+    "education": "bachelors",
+    "profession": "Startup founder",
+    "incomeBandLakhs": "25-50",
+    "familyType": "joint",
+    "bio": "Startup founder who enjoys badminton and reading history.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_035_city",
+          "kind": "location",
+          "allowedCities": [
+            "Chennai",
+            "Hyderabad"
+          ],
+          "acceptIfOpenToRelocate": false,
+          "label": "Lives in Chennai or Hyderabad",
+          "source": "intake"
+        },
+        {
+          "id": "cl_035_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_035_age",
+          "kind": "range",
+          "field": "age",
+          "min": 24,
+          "max": 29,
+          "label": "Age 24–29",
+          "source": "intake"
+        },
+        {
+          "id": "cl_035_heightCm",
+          "kind": "range",
+          "field": "heightCm",
+          "min": 168,
+          "label": "Height 168 cm or more",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_035_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 3,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_035_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Tamil"
+          ],
+          "weight": 1,
+          "label": "Prefers a Tamil speaker"
+        },
+        {
+          "id": "cl_035_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "joint"
+          ],
+          "weight": 2,
+          "label": "Prefers a joint family"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_036",
+    "name": "Karthik Reddy",
+    "gender": "male",
+    "age": 33,
+    "heightCm": 175,
+    "city": "Hyderabad",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "occasionally",
+    "drinking": "never",
+    "diet": "non_veg",
+    "religion": "Hindu",
+    "community": "Kamma",
+    "motherTongue": "Telugu",
+    "education": "bachelors",
+    "profession": "Software engineer",
+    "incomeBandLakhs": "10-25",
+    "familyType": "joint",
+    "bio": "Software engineer who enjoys board games and trekking.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_036_city",
+          "kind": "location",
+          "allowedCities": [
+            "Hyderabad",
+            "Mumbai"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Hyderabad or Mumbai, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_036_drinking",
+          "label": "Non-drinker only",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "socially",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_036_hasChildren",
+          "label": "No children from a previous marriage",
+          "kind": "equals",
+          "field": "hasChildren",
+          "value": false,
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_036_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "max": 165
+          },
+          "weight": 3,
+          "label": "Prefers 165 cm or shorter"
+        },
+        {
+          "id": "cl_036_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Telugu"
+          ],
+          "weight": 3,
+          "label": "Prefers a Telugu speaker"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_037",
+    "name": "Riddhi Vyas",
+    "gender": "female",
+    "age": 33,
+    "heightCm": 162,
+    "city": "Ahmedabad",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "non_veg",
+    "religion": "Hindu",
+    "community": "Lohana",
+    "motherTongue": "Gujarati",
+    "education": "bachelors",
+    "profession": "Civil servant",
+    "incomeBandLakhs": "50+",
+    "familyType": "nuclear",
+    "bio": "Civil servant who enjoys cricket and trekking.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_037_city",
+          "kind": "location",
+          "allowedCities": [
+            "Ahmedabad",
+            "Mumbai"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Ahmedabad or Mumbai, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_037_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_037_hasChildren",
+          "label": "No children from a previous marriage",
+          "kind": "equals",
+          "field": "hasChildren",
+          "value": false,
+          "source": "intake"
+        },
+        {
+          "id": "cl_037_age",
+          "kind": "range",
+          "field": "age",
+          "min": 31,
+          "max": 38,
+          "label": "Age 31–38",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_037_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_037_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_038",
+    "name": "Tony Kurian",
+    "gender": "male",
+    "age": 35,
+    "heightCm": 176,
+    "city": "SF Bay Area",
+    "openToRelocate": false,
+    "maritalStatus": "divorced",
+    "hasChildren": true,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "non_veg",
+    "religion": "Christian",
+    "community": "Latin Catholic",
+    "motherTongue": "Malayalam",
+    "education": "masters",
+    "profession": "Professor",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Professor who enjoys filter coffee and badminton.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_038_city",
+          "kind": "location",
+          "allowedCities": [
+            "SF Bay Area",
+            "Delhi NCR"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in SF Bay Area or Delhi NCR, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_038_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_038_age",
+          "kind": "range",
+          "field": "age",
+          "min": 31,
+          "max": 37,
+          "label": "Age 31–37",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_038_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 2,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_038_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Malayalam"
+          ],
+          "weight": 2,
+          "label": "Prefers a Malayalam speaker"
+        },
+        {
+          "id": "cl_038_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 3,
+          "label": "Prefers a nuclear family"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_039",
+    "name": "Apeksha Hegde",
+    "gender": "female",
+    "age": 28,
+    "heightCm": 167,
+    "city": "Bengaluru",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Madhwa Brahmin",
+    "motherTongue": "Kannada",
+    "education": "masters",
+    "profession": "Consultant",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Consultant who enjoys reading history and filter coffee.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_039_city",
+          "kind": "location",
+          "allowedCities": [
+            "Bengaluru",
+            "Mumbai"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Bengaluru or Mumbai, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_039_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_039_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_039_community",
+          "label": "Brahmin communities only",
+          "kind": "oneOf",
+          "field": "community",
+          "allowed": [
+            "Deshastha Brahmin",
+            "Niyogi Brahmin",
+            "Iyer",
+            "Iyengar",
+            "Madhwa Brahmin",
+            "Bengali Brahmin",
+            "Nagar Brahmin"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_039_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "min": 175
+          },
+          "weight": 2,
+          "label": "Prefers 175 cm or taller"
+        },
+        {
+          "id": "cl_039_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 2,
+          "label": "Prefers a nuclear family"
+        },
+        {
+          "id": "cl_039_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_040",
+    "name": "Chaitra Shetty",
+    "gender": "female",
+    "age": 31,
+    "heightCm": 164,
+    "city": "Bengaluru",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "non_veg",
+    "religion": "Hindu",
+    "community": "Lingayat",
+    "motherTongue": "Kannada",
+    "education": "professional",
+    "profession": "Doctor",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Doctor who enjoys trekking and baking.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_040_city",
+          "kind": "location",
+          "allowedCities": [
+            "Bengaluru",
+            "Hyderabad"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Bengaluru or Hyderabad, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_040_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_040_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_040_religion",
+          "kind": "oneOf",
+          "field": "religion",
+          "allowed": [
+            "Hindu"
+          ],
+          "label": "Hindu only",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_040_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 2,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_040_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Kannada"
+          ],
+          "weight": 3,
+          "label": "Prefers a Kannada speaker"
+        },
+        {
+          "id": "cl_040_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 2,
+          "label": "Prefers a nuclear family"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_041",
+    "name": "Arjun Natarajan",
+    "gender": "male",
+    "age": 31,
+    "heightCm": 165,
+    "city": "London",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "no",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "eggetarian",
+    "religion": "Hindu",
+    "community": "Mudaliar",
+    "motherTongue": "Tamil",
+    "education": "professional",
+    "profession": "Doctor",
+    "incomeBandLakhs": "25-50",
+    "familyType": "nuclear",
+    "bio": "Doctor who enjoys long drives and board games.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_041_city",
+          "kind": "location",
+          "allowedCities": [
+            "London",
+            "Delhi NCR"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in London or Delhi NCR, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_041_wantsChildren",
+          "label": "Child-free, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "no",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_041_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_041_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_041_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Tamil"
+          ],
+          "weight": 1,
+          "label": "Prefers a Tamil speaker"
+        },
+        {
+          "id": "cl_041_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 3,
+          "label": "Prefers a nuclear family"
+        },
+        {
+          "id": "cl_041_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 1,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_041_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_042",
+    "name": "Kunal Saxena",
+    "gender": "male",
+    "age": 36,
+    "heightCm": 166,
+    "city": "Delhi NCR",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "eggetarian",
+    "religion": "Hindu",
+    "community": "Rajput",
+    "motherTongue": "Hindi",
+    "education": "doctorate",
+    "profession": "Consultant",
+    "incomeBandLakhs": "25-50",
+    "familyType": "joint",
+    "bio": "Consultant who enjoys filter coffee and badminton.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_042_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_042_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_042_city",
+          "kind": "location",
+          "allowedCities": [
+            "Delhi NCR",
+            "Pune"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Delhi NCR or Pune, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_042_age",
+          "kind": "range",
+          "field": "age",
+          "min": 30,
+          "max": 38,
+          "label": "Age 30–38",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_042_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "joint"
+          ],
+          "weight": 3,
+          "label": "Prefers a joint family"
+        },
+        {
+          "id": "cl_042_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "max": 161
+          },
+          "weight": 3,
+          "label": "Prefers 161 cm or shorter"
+        },
+        {
+          "id": "cl_042_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Hindi"
+          ],
+          "weight": 3,
+          "label": "Prefers a Hindi speaker"
+        },
+        {
+          "id": "cl_042_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_043",
+    "name": "Rohit Sharma",
+    "gender": "male",
+    "age": 35,
+    "heightCm": 176,
+    "city": "Delhi NCR",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Rajput",
+    "motherTongue": "Hindi",
+    "education": "bachelors",
+    "profession": "Software engineer",
+    "incomeBandLakhs": "25-50",
+    "familyType": "joint",
+    "bio": "Software engineer who enjoys long drives and Carnatic music.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_043_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_043_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_043_age",
+          "kind": "range",
+          "field": "age",
+          "min": 30,
+          "max": 36,
+          "label": "Age 30–36",
+          "source": "intake"
+        },
+        {
+          "id": "cl_043_religion",
+          "kind": "oneOf",
+          "field": "religion",
+          "allowed": [
+            "Hindu"
+          ],
+          "label": "Hindu only",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_043_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Hindi"
+          ],
+          "weight": 2,
+          "label": "Prefers a Hindi speaker"
+        },
+        {
+          "id": "cl_043_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 1,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_043_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 1,
+          "label": "Prefers income above ₹25 L"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_044",
+    "name": "Simran Sandhu",
+    "gender": "female",
+    "age": 29,
+    "heightCm": 156,
+    "city": "Delhi NCR",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "open",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "veg",
+    "religion": "Sikh",
+    "community": "Khatri",
+    "motherTongue": "Punjabi",
+    "education": "doctorate",
+    "profession": "Professor",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Professor who enjoys Carnatic music and cricket.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_044_drinking",
+          "label": "Non-drinker only",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "socially",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_044_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_044_wantsChildren",
+          "label": "Child-free, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "no",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_044_hasChildren",
+          "label": "No children from a previous marriage",
+          "kind": "equals",
+          "field": "hasChildren",
+          "value": false,
+          "source": "intake"
+        },
+        {
+          "id": "cl_044_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_044_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "min": 172
+          },
+          "weight": 3,
+          "label": "Prefers 172 cm or taller"
+        },
+        {
+          "id": "cl_044_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 2,
+          "label": "Prefers someone in tech"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_045",
+    "name": "Jobin Varghese",
+    "gender": "male",
+    "age": 36,
+    "heightCm": 176,
+    "city": "Bengaluru",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "open",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Christian",
+    "community": "Latin Catholic",
+    "motherTongue": "Malayalam",
+    "education": "professional",
+    "profession": "Consultant",
+    "incomeBandLakhs": "10-25",
+    "familyType": "joint",
+    "bio": "Consultant who enjoys badminton and cricket.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_045_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_045_age",
+          "kind": "range",
+          "field": "age",
+          "min": 31,
+          "max": 38,
+          "label": "Age 31–38",
+          "source": "intake"
+        },
+        {
+          "id": "cl_045_wantsChildren",
+          "label": "Child-free, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "no",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_045_diet",
+          "label": "Vegetarian only",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "jain"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_045_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_045_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "joint"
+          ],
+          "weight": 1,
+          "label": "Prefers a joint family"
+        },
+        {
+          "id": "cl_045_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 2,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_045_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "max": 165
+          },
+          "weight": 3,
+          "label": "Prefers 165 cm or shorter"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_046",
+    "name": "Apeksha Shetty",
+    "gender": "female",
+    "age": 33,
+    "heightCm": 168,
+    "city": "Bengaluru",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Madhwa Brahmin",
+    "motherTongue": "Kannada",
+    "education": "professional",
+    "profession": "Software engineer",
+    "incomeBandLakhs": "10-25",
+    "familyType": "joint",
+    "bio": "Software engineer who enjoys badminton and Carnatic music.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_046_drinking",
+          "label": "Non-drinker only",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "socially",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_046_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_046_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_046_diet",
+          "label": "Vegetarian only",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "jain"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_046_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Kannada"
+          ],
+          "weight": 1,
+          "label": "Prefers a Kannada speaker"
+        },
+        {
+          "id": "cl_046_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 1,
+          "label": "Prefers a postgraduate"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_047",
+    "name": "Keerthi Rao",
+    "gender": "female",
+    "age": 25,
+    "heightCm": 162,
+    "city": "Hyderabad",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "occasionally",
+    "drinking": "never",
+    "diet": "eggetarian",
+    "religion": "Hindu",
+    "community": "Kamma",
+    "motherTongue": "Telugu",
+    "education": "masters",
+    "profession": "Data scientist",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Data scientist who enjoys trekking and Carnatic music.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_047_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_047_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_047_hasChildren",
+          "label": "No children from a previous marriage",
+          "kind": "equals",
+          "field": "hasChildren",
+          "value": false,
+          "source": "intake"
+        },
+        {
+          "id": "cl_047_city",
+          "kind": "location",
+          "allowedCities": [
+            "Hyderabad",
+            "Mumbai"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Hyderabad or Mumbai, or open to relocate",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_047_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_047_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 1,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_047_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_048",
+    "name": "Sravya Reddy",
+    "gender": "female",
+    "age": 34,
+    "heightCm": 170,
+    "city": "Singapore",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "no",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Reddy",
+    "motherTongue": "Telugu",
+    "education": "doctorate",
+    "profession": "Data scientist",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Data scientist who enjoys badminton and Carnatic music.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_048_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_048_wantsChildren",
+          "label": "Child-free, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "no",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_048_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_048_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_048_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_048_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "min": 178
+          },
+          "weight": 3,
+          "label": "Prefers 178 cm or taller"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_049",
+    "name": "Varun Chauhan",
+    "gender": "male",
+    "age": 31,
+    "heightCm": 188,
+    "city": "Delhi NCR",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Rajput",
+    "motherTongue": "Hindi",
+    "education": "masters",
+    "profession": "Consultant",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Consultant who enjoys board games and reading history.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_049_diet",
+          "label": "Vegetarian only",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "jain"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_049_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_049_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_049_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_049_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "max": 165
+          },
+          "weight": 3,
+          "label": "Prefers 165 cm or shorter"
+        },
+        {
+          "id": "cl_049_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Hindi"
+          ],
+          "weight": 3,
+          "label": "Prefers a Hindi speaker"
+        },
+        {
+          "id": "cl_049_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 2,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_049_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 2,
+          "label": "Prefers a nuclear family"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_050",
+    "name": "Pranav Raghavan",
+    "gender": "male",
+    "age": 36,
+    "heightCm": 177,
+    "city": "Chennai",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Mudaliar",
+    "motherTongue": "Tamil",
+    "education": "masters",
+    "profession": "Software engineer",
+    "incomeBandLakhs": "10-25",
+    "familyType": "joint",
+    "bio": "Software engineer who enjoys long drives and baking.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_050_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_050_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_050_heightCm",
+          "kind": "range",
+          "field": "heightCm",
+          "max": 168,
+          "label": "Height up to 168 cm",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_050_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "joint"
+          ],
+          "weight": 1,
+          "label": "Prefers a joint family"
+        },
+        {
+          "id": "cl_050_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 1,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_050_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 1,
+          "label": "Prefers a postgraduate"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_051",
+    "name": "Ninad Joshi",
+    "gender": "male",
+    "age": 32,
+    "heightCm": 166,
+    "city": "Pune",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Maratha",
+    "motherTongue": "Marathi",
+    "education": "bachelors",
+    "profession": "Civil servant",
+    "incomeBandLakhs": "<10",
+    "familyType": "nuclear",
+    "bio": "Civil servant who enjoys badminton and reading history.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_051_diet",
+          "label": "Vegetarian only",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "jain"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_051_age",
+          "kind": "range",
+          "field": "age",
+          "min": 27,
+          "max": 33,
+          "label": "Age 27–33",
+          "source": "intake"
+        },
+        {
+          "id": "cl_051_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_051_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_051_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_051_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Marathi"
+          ],
+          "weight": 3,
+          "label": "Prefers a Marathi speaker"
+        },
+        {
+          "id": "cl_051_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_051_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_052",
+    "name": "Shruti Srivastava",
+    "gender": "female",
+    "age": 33,
+    "heightCm": 172,
+    "city": "Delhi NCR",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "no",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Rajput",
+    "motherTongue": "Hindi",
+    "education": "bachelors",
+    "profession": "Chartered accountant",
+    "incomeBandLakhs": "25-50",
+    "familyType": "joint",
+    "bio": "Chartered accountant who enjoys badminton and trekking.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_052_age",
+          "kind": "range",
+          "field": "age",
+          "min": 32,
+          "max": 39,
+          "label": "Age 32–39",
+          "source": "intake"
+        },
+        {
+          "id": "cl_052_drinking",
+          "label": "Non-drinker only",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "socially",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_052_hasChildren",
+          "label": "No children from a previous marriage",
+          "kind": "equals",
+          "field": "hasChildren",
+          "value": false,
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_052_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Hindi"
+          ],
+          "weight": 2,
+          "label": "Prefers a Hindi speaker"
+        },
+        {
+          "id": "cl_052_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_052_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 1,
+          "label": "Prefers a postgraduate"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_053",
+    "name": "Ann Thomas",
+    "gender": "female",
+    "age": 33,
+    "heightCm": 154,
+    "city": "Bengaluru",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "no",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Christian",
+    "community": "Latin Catholic",
+    "motherTongue": "Malayalam",
+    "education": "masters",
+    "profession": "Product manager",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Product manager who enjoys badminton and Carnatic music.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_053_age",
+          "kind": "range",
+          "field": "age",
+          "min": 32,
+          "max": 38,
+          "label": "Age 32–38",
+          "source": "intake"
+        },
+        {
+          "id": "cl_053_wantsChildren",
+          "label": "Child-free, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "no",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_053_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_053_soft_heightCm",
+          "field": "heightCm",
+          "prefer": {
+            "min": 172
+          },
+          "weight": 2,
+          "label": "Prefers 172 cm or taller"
+        },
+        {
+          "id": "cl_053_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_054",
+    "name": "Vignesh Natarajan",
+    "gender": "male",
+    "age": 32,
+    "heightCm": 175,
+    "city": "Chennai",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "occasionally",
+    "drinking": "socially",
+    "diet": "non_veg",
+    "religion": "Hindu",
+    "community": "Mudaliar",
+    "motherTongue": "Tamil",
+    "education": "doctorate",
+    "profession": "Startup founder",
+    "incomeBandLakhs": "10-25",
+    "familyType": "joint",
+    "bio": "Startup founder who enjoys long drives and cricket.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_054_age",
+          "kind": "range",
+          "field": "age",
+          "min": 26,
+          "max": 33,
+          "label": "Age 26–33",
+          "source": "intake"
+        },
+        {
+          "id": "cl_054_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_054_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_054_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 3,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_054_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_055",
+    "name": "Pooja Agarwal",
+    "gender": "female",
+    "age": 27,
+    "heightCm": 161,
+    "city": "Delhi NCR",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "open",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Agarwal",
+    "motherTongue": "Hindi",
+    "education": "masters",
+    "profession": "Data scientist",
+    "incomeBandLakhs": "<10",
+    "familyType": "nuclear",
+    "bio": "Data scientist who enjoys cricket and baking.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_055_age",
+          "kind": "range",
+          "field": "age",
+          "min": 27,
+          "max": 31,
+          "label": "Age 27–31",
+          "source": "intake"
+        },
+        {
+          "id": "cl_055_wantsChildren",
+          "label": "Child-free, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "no",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_055_city",
+          "kind": "location",
+          "allowedCities": [
+            "Delhi NCR",
+            "Bengaluru"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Delhi NCR or Bengaluru, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_055_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_055_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_055_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 3,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_055_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Hindi"
+          ],
+          "weight": 3,
+          "label": "Prefers a Hindi speaker"
+        },
+        {
+          "id": "cl_055_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 1,
+          "label": "Prefers a nuclear family"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_056",
+    "name": "Abhishek Saxena",
+    "gender": "male",
+    "age": 35,
+    "heightCm": 187,
+    "city": "Delhi NCR",
+    "openToRelocate": false,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "eggetarian",
+    "religion": "Hindu",
+    "community": "Kayastha",
+    "motherTongue": "Hindi",
+    "education": "masters",
+    "profession": "Architect",
+    "incomeBandLakhs": "<10",
+    "familyType": "nuclear",
+    "bio": "Architect who enjoys board games and reading history.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_056_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_056_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_056_age",
+          "kind": "range",
+          "field": "age",
+          "min": 30,
+          "max": 35,
+          "label": "Age 30–35",
+          "source": "intake"
+        },
+        {
+          "id": "cl_056_diet",
+          "label": "Vegetarian or eggetarian",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "eggetarian",
+            "jain"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_056_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_056_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Hindi"
+          ],
+          "weight": 2,
+          "label": "Prefers a Hindi speaker"
+        },
+        {
+          "id": "cl_056_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_057",
+    "name": "Adil Khan",
+    "gender": "male",
+    "age": 37,
+    "heightCm": 185,
+    "city": "Hyderabad",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "non_veg",
+    "religion": "Muslim",
+    "community": "Sunni",
+    "motherTongue": "Urdu",
+    "education": "bachelors",
+    "profession": "Professor",
+    "incomeBandLakhs": "10-25",
+    "familyType": "joint",
+    "bio": "Professor who enjoys badminton and long drives.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_057_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_057_smoking",
+          "label": "No regular smokers",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_057_hasChildren",
+          "label": "No children from a previous marriage",
+          "kind": "equals",
+          "field": "hasChildren",
+          "value": false,
+          "source": "intake"
+        },
+        {
+          "id": "cl_057_age",
+          "kind": "range",
+          "field": "age",
+          "min": 31,
+          "max": 39,
+          "label": "Age 31–39",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_057_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "joint"
+          ],
+          "weight": 3,
+          "label": "Prefers a joint family"
+        },
+        {
+          "id": "cl_057_soft_education",
+          "field": "education",
+          "prefer": [
+            "masters",
+            "doctorate",
+            "professional"
+          ],
+          "weight": 2,
+          "label": "Prefers a postgraduate"
+        },
+        {
+          "id": "cl_057_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 1,
+          "label": "Prefers income above ₹25 L"
+        },
+        {
+          "id": "cl_057_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Urdu"
+          ],
+          "weight": 2,
+          "label": "Prefers a Urdu speaker"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_058",
+    "name": "Karthik Varma",
+    "gender": "male",
+    "age": 31,
+    "heightCm": 165,
+    "city": "Hyderabad",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "veg",
+    "religion": "Hindu",
+    "community": "Niyogi Brahmin",
+    "motherTongue": "Telugu",
+    "education": "professional",
+    "profession": "Chartered accountant",
+    "incomeBandLakhs": "10-25",
+    "familyType": "nuclear",
+    "bio": "Chartered accountant who enjoys board games and cricket.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_058_wantsChildren",
+          "label": "Wants children, or open to it",
+          "kind": "oneOf",
+          "field": "wantsChildren",
+          "allowed": [
+            "yes",
+            "open"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_058_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_058_diet",
+          "label": "Vegetarian only",
+          "kind": "oneOf",
+          "field": "diet",
+          "allowed": [
+            "veg",
+            "jain"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_058_drinking",
+          "label": "Non-drinker only",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "socially",
+            "regularly"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_058_soft_motherTongue",
+          "field": "motherTongue",
+          "prefer": [
+            "Telugu"
+          ],
+          "weight": 3,
+          "label": "Prefers a Telugu speaker"
+        },
+        {
+          "id": "cl_058_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 3,
+          "label": "Prefers income above ₹25 L"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_059",
+    "name": "Faizan Ansari",
+    "gender": "male",
+    "age": 28,
+    "heightCm": 165,
+    "city": "Delhi NCR",
+    "openToRelocate": true,
+    "maritalStatus": "never_married",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "never",
+    "diet": "non_veg",
+    "religion": "Muslim",
+    "community": "Sunni",
+    "motherTongue": "Urdu",
+    "education": "masters",
+    "profession": "Doctor",
+    "incomeBandLakhs": "50+",
+    "familyType": "joint",
+    "bio": "Doctor who enjoys trekking and Carnatic music.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_059_maritalStatus",
+          "label": "Never married only",
+          "kind": "oneOf",
+          "field": "maritalStatus",
+          "allowed": [
+            "never_married"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_059_heightCm",
+          "kind": "range",
+          "field": "heightCm",
+          "max": 159,
+          "label": "Height up to 159 cm",
+          "source": "intake"
+        },
+        {
+          "id": "cl_059_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_059_city",
+          "kind": "location",
+          "allowedCities": [
+            "Delhi NCR",
+            "Hyderabad"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Delhi NCR or Hyderabad, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_059_age",
+          "kind": "range",
+          "field": "age",
+          "min": 22,
+          "max": 28,
+          "label": "Age 22–28",
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_059_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "joint"
+          ],
+          "weight": 1,
+          "label": "Prefers a joint family"
+        },
+        {
+          "id": "cl_059_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 1,
+          "label": "Prefers someone in tech"
+        },
+        {
+          "id": "cl_059_soft_incomeBandLakhs",
+          "field": "incomeBandLakhs",
+          "prefer": [
+            "25-50",
+            "50+"
+          ],
+          "weight": 3,
+          "label": "Prefers income above ₹25 L"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cl_060",
+    "name": "Sreeja Ghosh",
+    "gender": "female",
+    "age": 30,
+    "heightCm": 158,
+    "city": "Kolkata",
+    "openToRelocate": false,
+    "maritalStatus": "widowed",
+    "hasChildren": false,
+    "wantsChildren": "yes",
+    "smoking": "never",
+    "drinking": "socially",
+    "diet": "non_veg",
+    "religion": "Hindu",
+    "community": "Bengali Brahmin",
+    "motherTongue": "Bengali",
+    "education": "doctorate",
+    "profession": "Consultant",
+    "incomeBandLakhs": "50+",
+    "familyType": "nuclear",
+    "bio": "Consultant who enjoys reading history and trekking.",
+    "matchmakerId": "mm_b",
+    "preferences": {
+      "hard": [
+        {
+          "id": "cl_060_heightCm",
+          "kind": "range",
+          "field": "heightCm",
+          "min": 168,
+          "label": "Height 168 cm or more",
+          "source": "intake"
+        },
+        {
+          "id": "cl_060_drinking",
+          "label": "No regular drinkers",
+          "kind": "noneOf",
+          "field": "drinking",
+          "disallowed": [
+            "regularly"
+          ],
+          "source": "intake"
+        },
+        {
+          "id": "cl_060_hasChildren",
+          "label": "No children from a previous marriage",
+          "kind": "equals",
+          "field": "hasChildren",
+          "value": false,
+          "source": "intake"
+        },
+        {
+          "id": "cl_060_city",
+          "kind": "location",
+          "allowedCities": [
+            "Kolkata",
+            "Bengaluru"
+          ],
+          "acceptIfOpenToRelocate": true,
+          "label": "Lives in Kolkata or Bengaluru, or open to relocate",
+          "source": "intake"
+        },
+        {
+          "id": "cl_060_smoking",
+          "label": "Non-smoker only",
+          "kind": "noneOf",
+          "field": "smoking",
+          "disallowed": [
+            "occasionally",
+            "regularly"
+          ],
+          "source": "intake"
+        }
+      ],
+      "soft": [
+        {
+          "id": "cl_060_soft_familyType",
+          "field": "familyType",
+          "prefer": [
+            "nuclear"
+          ],
+          "weight": 1,
+          "label": "Prefers a nuclear family"
+        },
+        {
+          "id": "cl_060_soft_profession",
+          "field": "profession",
+          "prefer": [
+            "Software engineer",
+            "Data scientist",
+            "Product manager"
+          ],
+          "weight": 3,
+          "label": "Prefers someone in tech"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "fs_01",
+    "clientId": "cl_001",
+    "candidateId": "cd_011",
+    "feedbackText": "He smokes regularly!! I have told you 10 times no smokers. pls check before sending such profiles"
+  },
+  {
+    "id": "fs_02",
+    "clientId": "cl_005",
+    "candidateId": "cd_012",
+    "feedbackText": "Ma'am she is in Bengaluru... I said Chennai or Mumbai only. also looks much older than the photos"
+  },
+  {
+    "id": "fs_03",
+    "clientId": "cl_006",
+    "candidateId": "cd_006",
+    "feedbackText": "non veg khata hai, hum pure veg hain. sorry no"
+  },
+  {
+    "id": "fs_04",
+    "clientId": "cl_002",
+    "candidateId": "cd_005",
+    "feedbackText": "spoke on phone, he drinks every weekend it seems. profile mein kuch nahi likha tha"
+  },
+  {
+    "id": "fs_05",
+    "clientId": "cl_003",
+    "candidateId": "cd_013",
+    "feedbackText": "she said no kids at all?? this was not on the profile. otherwise nice"
+  },
+  {
+    "id": "fs_06",
+    "clientId": "cl_011",
+    "candidateId": "cd_010",
+    "feedbackText": "he is 36, feels too old for me honestly. I know it is within my range but still"
+  },
+  {
+    "id": "fs_07",
+    "clientId": "cl_008",
+    "candidateId": "cd_080",
+    "feedbackText": "she lives in Hyderabad but at the other end, too far for me with this traffic"
+  },
+  {
+    "id": "fs_08",
+    "clientId": "cl_012",
+    "candidateId": "cd_001",
+    "feedbackText": "joint family with 3 generations in one house.. I want my own space. nice person otherwise"
+  },
+  {
+    "id": "fs_09",
+    "clientId": "cl_015",
+    "candidateId": "cd_057",
+    "feedbackText": "he runs a startup, too unstable for my parents. baaki sab theek hai"
+  },
+  {
+    "id": "fs_10",
+    "clientId": "cl_014",
+    "candidateId": "cd_024",
+    "feedbackText": "education is just bachelors, i was hoping for masters atleast. photos r nice tho"
+  },
+  {
+    "id": "fs_11",
+    "clientId": "cl_004",
+    "candidateId": "cd_002",
+    "feedbackText": "photos dont match the person on video call. no chemistry. sorry"
+  },
+  {
+    "id": "fs_12",
+    "clientId": "cl_007",
+    "candidateId": "cd_015",
+    "feedbackText": "abhi nahi yaar, busy with office and travel till diwali. maybe later"
+  }
+]
