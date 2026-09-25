@@ -1,0 +1,24 @@
+.layout {
+  display: grid;
+  gap: var(--space-32);
+  align-items: start;
+}
+
+.inputs,
+.outputs {
+  display: grid;
+  gap: var(--space-24);
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: var(--space-40);
+  }
+
+  .outputs {
+    position: sticky;
+    top: calc(var(--nav-h) + var(--space-16));
+  }
+}

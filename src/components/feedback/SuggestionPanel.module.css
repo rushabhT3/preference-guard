@@ -1,0 +1,41 @@
+.empty {
+  color: var(--muted);
+  font-size: var(--fs-small);
+}
+
+.list {
+  display: grid;
+  gap: var(--space-16);
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-8);
+  padding: var(--space-16);
+  border: var(--bw) dashed var(--accent);
+  border-radius: var(--radius-control);
+  background: var(--accent-wash);
+}
+
+.rule {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.label {
+  font-weight: var(--fw-semibold);
+}
+
+.evidence {
+  color: var(--muted);
+  font-size: var(--fs-small);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-8);
+}
