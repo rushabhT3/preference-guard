@@ -1,0 +1,139 @@
+.row {
+  --status-ink: var(--clear-ink);
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) auto;
+  gap: var(--space-8) var(--space-20);
+  align-items: start;
+  padding: var(--space-16) var(--space-20);
+  box-shadow: inset var(--bw-edge) 0 0 var(--status-ink);
+  transition: background-color var(--dur-fast) ease;
+}
+
+.row + .row {
+  border-top: var(--border-row);
+}
+
+.row:hover {
+  background: var(--bg);
+}
+
+.needs_check {
+  --status-ink: var(--needs-ink);
+}
+
+.blocked {
+  --status-ink: var(--blocked-ink);
+}
+
+.fit {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-6);
+}
+
+.fitScore {
+  font-size: var(--fs-score);
+  font-weight: var(--fw-semibold);
+  font-feature-settings: var(--num-features);
+  line-height: var(--lh-none);
+  letter-spacing: var(--ls-tight);
+}
+
+.blocked .fitScore {
+  color: var(--muted);
+}
+
+.fitCaption {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  letter-spacing: var(--ls-label);
+  line-height: var(--lh-snug);
+  text-transform: uppercase;
+}
+
+.main {
+  min-width: 0;
+}
+
+.name {
+  font-size: var(--fs-name);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-tight);
+  line-height: var(--lh-snug);
+}
+
+.meta,
+.quiet {
+  margin-top: var(--space-2);
+  color: var(--muted);
+  font-size: var(--fs-small);
+}
+
+.quiet {
+  margin-top: var(--space-8);
+}
+
+.lines {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  list-style: none;
+}
+
+.line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--space-8);
+  font-size: var(--fs-small);
+  line-height: 1.45;
+}
+
+.line::before {
+  content: "";
+  width: 12px;
+  height: 1.5px;
+  background: var(--status-ink);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-8);
+}
+
+.confirm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-8);
+  max-width: 320px;
+  font-size: var(--fs-small);
+}
+
+.confirm p {
+  flex-basis: 100%;
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .row {
+    grid-template-columns: 48px minmax(0, 1fr);
+    padding: var(--space-16);
+  }
+
+  .actions {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+
+  .confirm,
+  .confirm p {
+    justify-content: flex-start;
+    max-width: none;
+    text-align: left;
+  }
+}

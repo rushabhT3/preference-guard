@@ -1,0 +1,70 @@
+.blockers {
+  display: grid;
+  gap: var(--space-6);
+  padding: var(--space-12) var(--space-16);
+  border-radius: var(--radius-control);
+  background: var(--blocked-bg);
+  color: var(--blocked-ink);
+  font-size: var(--fs-small);
+  list-style: none;
+}
+
+.reasons {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-20);
+  border: 0;
+}
+
+.legend {
+  margin-bottom: var(--space-8);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  min-height: var(--control-h);
+  padding-inline: var(--space-12);
+  border: var(--border-default);
+  border-radius: var(--radius-control);
+  cursor: pointer;
+  transition: border-color var(--dur-fast) ease;
+}
+
+.option:has(:checked) {
+  border-color: var(--accent);
+  background: var(--accent-wash);
+}
+
+.option input {
+  accent-color: var(--accent);
+}
+
+.other {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+  font-size: var(--fs-small);
+}
+
+.other textarea {
+  padding: var(--space-8) var(--space-12);
+  border: var(--border-control);
+  border-radius: var(--radius-control);
+  resize: vertical;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-8);
+  margin-top: var(--space-24);
+  padding-top: var(--space-16);
+  border-top: var(--border-row);
+}

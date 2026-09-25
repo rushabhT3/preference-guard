@@ -1,0 +1,52 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-6);
+  min-height: 22px;
+  padding: 0 var(--space-8);
+  border: var(--bw) solid transparent;
+  border-radius: var(--radius-tag);
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-none);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.glyph {
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+}
+
+.neutral {
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+.accent {
+  border-color: var(--accent);
+  background: var(--accent-wash);
+  color: var(--accent);
+}
+
+.dashed {
+  border-style: dashed;
+}
+
+.clear {
+  background: var(--clear-bg);
+  color: var(--clear-ink);
+}
+
+.needs {
+  background: var(--needs-bg);
+  color: var(--needs-ink);
+}
+
+.blocked {
+  background: var(--blocked-bg);
+  color: var(--blocked-ink);
+}

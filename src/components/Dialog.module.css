@@ -1,0 +1,72 @@
+.dialog {
+  width: min(480px, calc(100% - 2 * var(--gutter)));
+  margin: 12vh auto auto;
+  padding: var(--space-24);
+  background: var(--surface);
+  color: var(--text);
+  border: var(--border-default);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--shadow-dialog);
+}
+
+.dialog[open] {
+  animation: rise var(--dur-base) var(--ease-out);
+}
+
+.dialog::backdrop {
+  background: var(--scrim);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-16);
+  margin-bottom: var(--space-16);
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+}
+
+.title {
+  margin-top: var(--space-4);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+}
+
+.close {
+  display: grid;
+  place-items: center;
+  width: var(--control-h-sm);
+  height: var(--control-h-sm);
+  flex: none;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--muted);
+}
+
+.close:hover {
+  background: var(--sunken);
+  color: var(--text);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (max-width: 767px) {
+  .dialog {
+    padding: var(--space-20);
+  }
+}

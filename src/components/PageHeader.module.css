@@ -1,0 +1,36 @@
+.header {
+  padding-block: var(--space-32) var(--space-40);
+}
+
+.eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-8);
+  padding-bottom: var(--space-12);
+  margin-bottom: var(--space-20);
+  border-bottom: var(--border-rule);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+}
+
+.title {
+  max-width: 22ch;
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-h1);
+  text-wrap: balance;
+}
+
+.lede {
+  max-width: var(--measure);
+  margin-top: var(--space-12);
+  color: var(--muted);
+  font-size: var(--fs-lead);
+  line-height: 1.45;
+  text-wrap: pretty;
+}

@@ -1,0 +1,117 @@
+/* Derived from icomat.co.uk: one grotesk, uppercase mono labels, a 1px rule above every figure. */
+:root {
+  color-scheme: light;
+
+  --bg: #fafaf7;
+  --surface: #ffffff;
+  --sunken: #f3f3ee;
+  --track: #e6e6e0;
+  --text: #1b1b1b;
+  --muted: #555555;
+  --faint: #6b6b66;
+  --border: #dadad5;
+  --border-subtle: #e9e9e4;
+  --border-strong: #8a8a84;
+  --rule: var(--text);
+  --accent: #0f5e5a;
+  --accent-strong: #0b4744;
+  --accent-wash: #eaf2f1;
+  --on-accent: #ffffff;
+  --danger: #9b1c1c;
+  --danger-strong: #7e1515;
+  --scrim: rgb(27 27 27 / 0.48);
+
+  --clear-ink: #1e6b3a;
+  --clear-bg: #e6f2ea;
+  --needs-ink: #7a4b00;
+  --needs-bg: #fdf1d8;
+  --blocked-ink: #9b1c1c;
+  --blocked-bg: #fbe7e7;
+
+  --font-sans: var(--font-schibsted), "Helvetica Neue", Arial, sans-serif;
+  --font-mono:
+    var(--font-plex-mono), ui-monospace, "SFMono-Regular", Menlo, Consolas,
+    monospace;
+  --font-dots: var(--font-doto), var(--font-mono);
+  --num-features: "tnum" 1, "zero" 1;
+
+  --fs-caption: 0.6875rem;
+  --fs-label: 0.75rem;
+  --fs-small: 0.8125rem;
+  --fs-control: 0.875rem;
+  --fs-body: 0.9375rem;
+  --fs-name: 1rem;
+  --fs-lead: 1.125rem;
+  --fs-h3: 1.25rem;
+  --fs-score: 1.5rem;
+  --fs-h2: clamp(1.375rem, 1.1rem + 0.9vw, 1.75rem);
+  --fs-h1: clamp(2rem, 1.4rem + 1.6vw, 3rem);
+  --fs-display: clamp(3rem, 2rem + 3vw, 4.875rem);
+
+  --lh-none: 1;
+  --lh-heading: 1.04;
+  --lh-snug: 1.25;
+  --lh-body: 1.5;
+
+  --ls-display: -0.03em;
+  --ls-h1: -0.015em;
+  --ls-tight: -0.01em;
+  --ls-label: 0.02em;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+
+  --radius-tag: 3px;
+  --radius-control: 6px;
+  --radius-panel: 10px;
+  --radius-pill: 999px;
+
+  --bw: 1px;
+  --bw-edge: 3px;
+  --bw-focus: 2px;
+  --border-default: var(--bw) solid var(--border);
+  --border-row: var(--bw) solid var(--border-subtle);
+  --border-rule: var(--bw) solid var(--rule);
+  --border-control: var(--bw) solid var(--border-strong);
+
+  --shadow-dialog: 0 20px 60px rgb(27 27 27 / 0.14);
+
+  --dur-fast: 150ms;
+  --dur-base: 300ms;
+  --dur-slow: 600ms;
+  --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-in-out: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+  --page-max: 1320px;
+  --gutter: clamp(16px, 2.2vw, 32px);
+  --grid-gap: 20px;
+  --measure: 62ch;
+  --nav-h: 56px;
+  --control-h: 40px;
+  --control-h-sm: 32px;
+  --sidebar-w: minmax(300px, 380px);
+
+  --z-nav: 10;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+  }
+}
